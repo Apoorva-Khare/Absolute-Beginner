@@ -1,0 +1,22 @@
+'''
+Given a string S, print the reverse of the string after removing the vowels.If the resulting string is empty print '-1'.
+Input Size : 1 <= N <= 100000
+Sample Testcase :
+INPUT
+codekata
+OUTPUT
+tkdc
+'''
+string = input()
+
+vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+result = ""
+
+for i in range(len(string)):
+    if string[i] not in vowels:
+        result = result + string[i]
+
+if len(result)==0:
+    print(-1)
+else:
+    print(result[::-1])
